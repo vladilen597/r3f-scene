@@ -1,4 +1,4 @@
-import { Canvas, useThree } from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import './App.css'
 import { Suspense } from 'react'
 import { OrbitControls } from '@react-three/drei'
@@ -6,7 +6,6 @@ import Lantern from './Components/Lantern/Lantern'
 import Table from './Components/Table/Table'
 import Floor from './Components/Floor/Floor'
 import Wall from './Components/Wall/Wall'
-import Background from './Components/Background/Background'
 
 function App() {
   return (
@@ -28,7 +27,6 @@ function App() {
         <Table />
         <Floor />
         <Wall />
-        <Background />
       </Canvas>
     </Suspense>
   )

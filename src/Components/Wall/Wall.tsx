@@ -1,4 +1,4 @@
-import { Subtraction, Base, Geometry, Addition } from '@react-three/csg'
+import { Subtraction, Base, Geometry } from '@react-three/csg'
 import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 
