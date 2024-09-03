@@ -6,7 +6,7 @@ interface GlassMaterialProps {
 }
 
 const GlassMaterial = ({ position = [0, 0, 0] }: GlassMaterialProps) => {
-  const glassRoughness = useLoader(THREE.TextureLoader, 'glass-roughness.jpg')
+  const glassRoughness = useLoader(THREE.TextureLoader, '/glass-roughness.jpg')
   // Create a glass material with enhanced shine
   const glassMaterial = new THREE.MeshPhysicalMaterial({
     color: 0x88ccee,
@@ -22,7 +22,7 @@ const GlassMaterial = ({ position = [0, 0, 0] }: GlassMaterialProps) => {
   })
 
   // Create a geometry for the glass object
-  const geometry = new THREE.BoxGeometry(0.7, 1, 0.7)
+  const geometry = new THREE.BoxGeometry(0.7, 1.5, 0.7)
 
   // Create a mesh with the geometry and the glass material
   const glassMesh = new THREE.Mesh(geometry, glassMaterial)

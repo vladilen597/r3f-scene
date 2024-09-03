@@ -1,10 +1,12 @@
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
 import './App.css'
 import { Suspense } from 'react'
 import { OrbitControls } from '@react-three/drei'
-import { Physics } from '@react-three/cannon'
 import Lantern from './Components/Lantern/Lantern'
 import Table from './Components/Table/Table'
+import Floor from './Components/Floor/Floor'
+import Wall from './Components/Wall/Wall'
+import Background from './Components/Background/Background'
 
 function App() {
   return (
@@ -15,20 +17,18 @@ function App() {
         shadows
       >
         <OrbitControls />
-        <ambientLight intensity={0.5} color='#fff' />
+        <ambientLight intensity={0.1} color='#fff' />
         {/* <directionalLight
           position={[10, 10, 10]}
           intensity={1}
           color='#fff'
           castShadow
         /> */}
-        <Physics>
-          {/* <GroundPlane /> */}
-          {/* <PhysicsBox /> */}
-        </Physics>
         <Lantern />
         <Table />
-        <color attach='background' args={['#333']} />
+        <Floor />
+        <Wall />
+        <Background />
       </Canvas>
     </Suspense>
   )

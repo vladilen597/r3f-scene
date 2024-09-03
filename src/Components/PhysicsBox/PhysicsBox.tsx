@@ -3,7 +3,7 @@ import { RoundedBox } from '@react-three/drei'
 import * as THREE from 'three'
 
 const PhysicsBox = () => {
-  const woodTexture = new THREE.TextureLoader().load('wood.jpg')
+  const woodTexture = new THREE.TextureLoader().load('/wood.jpg')
 
   const [ref] = useBox(() => ({
     mass: 1,
