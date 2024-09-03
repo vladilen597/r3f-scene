@@ -16,7 +16,7 @@ function App() {
         shadows
       >
         <OrbitControls />
-        <ambientLight intensity={0.1} color='#fff' />
+        <ambientLight intensity={0.1} color='#040409' />
         {/* <directionalLight
           position={[10, 10, 10]}
           intensity={1}
@@ -27,6 +27,7 @@ function App() {
         <Table />
         <Floor />
         <Wall />
+        <color attach='background' args={['#040409']} />
       </Canvas>
     </Suspense>
   )

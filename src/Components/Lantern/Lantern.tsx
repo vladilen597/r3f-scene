@@ -113,6 +113,7 @@ const Lantern = () => {
         color='#eabc3a'
         distance={10} // Increase the distance to cover a larger area
         castShadow
+        intensity={10}
         args={[0.5, 0.5, 0.5]}
         shadow-mapSize-width={2048} // Increase shadow map size for better quality
         shadow-mapSize-height={2048}
