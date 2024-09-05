@@ -8,6 +8,8 @@ import Floor from './Components/Floor/Floor'
 import Wall from './Components/Wall/Wall'
 import Sky from './Components/Sky/Sky'
 import Window from './Components/Window/Window'
+import Terrain from './Components/Terrain/Terrain'
+import Tree from './Components/Tree/Tree'
 
 function App() {
   return (
@@ -22,15 +24,27 @@ function App() {
         <ambientLight intensity={1} color='#fff' />
         <ambientLight intensity={0.1} color='#040409' />
 
-        <Lantern />
+        <group position={[3, 0, -1.5]} rotation={[0, Math.PI / 4, 0]}>
+          <Lantern />
+        </group>
         <Table />
         <Floor />
         <Wall />
         <Sky />
-        <Window position={[1.95, 4.4, -3.3]} />
-        {/* <Window position={[-1.95, 4.4, -3.3]} /> */}
-        <axesHelper />
-        <color attach='background' args={['#040409']} />
+        <Window
+          position={[-3.75, 4.4, -2.8]}
+          rotation={[0, -2.4, 0]}
+          animationEnd={-2.45}
+        />
+        <Window
+          position={[3.75, 4.4, -2.8]}
+          rotation={[0, -0.9, 0]}
+          animationEnd={-0.95}
+        />
+        <Terrain />
+        <group position={[50, 10, -200]}>
+          <Tree />
+        </group>
       </Canvas>
     </Suspense>
   )

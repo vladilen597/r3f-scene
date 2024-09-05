@@ -8,7 +8,7 @@ const Sky = () => {
   return (
     <>
       <ThreeSky
-        distance={900000}
+        distance={90000}
         sunPosition={[0, -10, 0]}
         mieDirectionalG={0.8}
         rayleigh={10}
