@@ -1,6 +1,7 @@
 import { Box } from '@react-three/drei'
 import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
+import TableProps from './TableProps/TableProps'
 
 const Table = () => {
   const tableTexture = useLoader(
@@ -66,6 +67,9 @@ const Table = () => {
             color='#ffc18c'
           />
         </Box>
+      </group>
+      <group>
+        <TableProps />
       </group>
     </group>
   )

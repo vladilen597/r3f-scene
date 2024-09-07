@@ -10,6 +10,9 @@ import Sky from './Components/Sky/Sky'
 import Window from './Components/Window/Window'
 import Terrain from './Components/Terrain/Terrain'
 import Tree from './Components/Tree/Tree'
+import Fence from './Components/Fence/Fence'
+import { Physics } from '@react-three/cannon'
+import Test from './Components/Cloth/Cloth'
 
 function App() {
   return (
@@ -42,9 +45,13 @@ function App() {
           animationEnd={-0.95}
         />
         <Terrain />
-        <group position={[50, 10, -200]}>
-          <Tree />
-        </group>
+        <Fence />
+        <Physics>
+          <group position={[80, 19, -290]}>
+            <Tree />
+          </group>
+          <Test />
+        </Physics>
       </Canvas>
     </Suspense>
   )

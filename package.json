@@ -24,7 +24,9 @@
     "react-spring": "^9.7.4",
     "sass": "^1.77.8",
     "three": "^0.168.0",
-    "three-stdlib": "^2.32.2"
+    "three-stdlib": "^2.32.2",
+    "use-ammojs": "^0.2.21",
+    "use-cannon": "^0.5.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

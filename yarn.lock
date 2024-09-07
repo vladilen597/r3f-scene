@@ -1138,6 +1138,15 @@ ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
+ammo-debug-drawer@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/ammo-debug-drawer/-/ammo-debug-drawer-1.0.1.tgz#c1d84d0342905cf7c08301e6551892a23c13955d"
+  integrity sha512-oPvQh5CQKgFQpIuBMMKxT019aYoONOEnBLn91dAg3CrMWdSP/Om8rLWRX0VkAk45SEK/B0ybXB7nsjXsz8QEBw==
+
+ammo.js@kripken/ammo.js:
+  version "0.0.2"
+  resolved "https://codeload.github.com/kripken/ammo.js/tar.gz/1ed8b58c7058a5f697f2642ceef8ee20fdd55e10"
+
 ansi-regex@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-5.0.1.tgz#082cb2c89c9fe8659a311a53bd6a4dc5301db304"
@@ -2381,7 +2390,7 @@ three-mesh-bvh@^0.7.0:
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.7.6.tgz#6764b39475bdba9450ad3a4065492678ee537272"
   integrity sha512-rCjsnxEqR9r1/C/lCqzGLS67NDty/S/eT6rAJfDvsanrIctTWdNoR4ZOGWewCB13h1QkVo2BpmC0wakj1+0m8A==
 
-three-stdlib@^2.23.4, three-stdlib@^2.29.9, three-stdlib@^2.32.2:
+three-stdlib@^2.23.4, three-stdlib@^2.29.9, three-stdlib@^2.32.2, three-stdlib@^2.4.0:
   version "2.32.2"
   resolved "https://registry.yarnpkg.com/three-stdlib/-/three-stdlib-2.32.2.tgz#ddfbfc6c352b1240cb38121b2b808fa1bde1dcc8"
   integrity sha512-ZN25Na/Xg7APhGKwJ1zhGdhZDsDGGnnm1k5Z+9LLlnfsFye4jigvbN3eA/Ta8hQmBNmEHXoozpmpKK1x8dCePQ==
@@ -2482,6 +2491,21 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-ammojs@^0.2.21:
+  version "0.2.21"
+  resolved "https://registry.yarnpkg.com/use-ammojs/-/use-ammojs-0.2.21.tgz#fe12e70055a90dc866c84b66a5b690817c7974fe"
+  integrity sha512-W6lVEOg1Sw7ZU1mcQdT07F9d347Gyb3wwFhvtz0G5masu+Rf0g0bSUo4cAAD0hIo2U+pQTXZZUyVLpMB/cP1KQ==
+  dependencies:
+    ammo-debug-drawer "^1.0.1"
+    ammo.js kripken/ammo.js
+    stats.js "^0.17.0"
+    three-stdlib "^2.4.0"
+
+use-cannon@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/use-cannon/-/use-cannon-0.5.3.tgz#8641736e94df886ee683517185ad55c38b363f07"
+  integrity sha512-zVn1rRQJ3rw5grOkkNaxRcjS3AWsklrwHsOkmFiUq7Ac+jOE3CEJtASDK2ErScPe85c3BZDRO+/y9UU7VfaD1g==
 
 use-sync-external-store@1.2.2:
   version "1.2.2"
