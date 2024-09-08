@@ -5,8 +5,12 @@ import { Bloom, EffectComposer } from '@react-three/postprocessing'
 import FireParticles from '../Shared/FireParticles/FireParticles'
 import { useLoader } from '@react-three/fiber'
 import { Subtraction, Base, Geometry } from '@react-three/csg'
+import { useEffect, useState } from 'react'
 
 const Lantern = () => {
+  const [intensity, setIntensity] = useState(10)
+  const [hovered, setHovered] = useState(false)
+
   const metalTexture = useLoader(
     THREE.TextureLoader,
     '/metal/Metal053A_1K-PNG_Color.png'
@@ -20,8 +24,34 @@ const Lantern = () => {
     '/metal/Metal053A_1K-PNG_Roughness.png'
   )
 
+  const higherIntensity = () => {
+    if (intensity >= 20) return
+    setIntensity(intensity + 1)
+  }
+
+  const lowerIntensity = () => {
+    if (intensity <= 0) return
+    setIntensity(intensity - 1)
+  }
+
+  useEffect(() => {
+    document.body.style.cursor = hovered ? 'pointer' : 'auto'
+  }, [hovered])
+
+  const hoverOn = () => {
+    setHovered(true)
+  }
+  const hoverOff = () => {
+    setHovered(false)
+  }
+
   return (
-    <group>
+    <group
+      onPointerEnter={hoverOn}
+      onPointerLeave={hoverOff}
+      onContextMenu={lowerIntensity}
+      onClick={higherIntensity}
+    >
       <Box receiveShadow castShadow args={[0.1, 1.5, 0.1]}>
         <meshStandardMaterial
           map={metalTexture}
@@ -143,13 +173,13 @@ const Lantern = () => {
         color='#eabc3a'
         distance={10}
         castShadow
-        intensity={10}
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
-        shadow-camera-near={0.1}
-        shadow-camera-far={20}
-        shadow-bias={-0.005}
-        shadow-radius={10}
+        intensity={intensity}
+        // shadow-mapSize-width={2048}
+        // shadow-mapSize-height={2048}
+        // shadow-camera-near={0.1}
+        // shadow-camera-far={20}
+        // shadow-bias={-0.005}
+        // shadow-radius={10}
       />
       <GlassMaterial position={[0.37, 0, 0.37]} />
       <Box
@@ -165,7 +195,7 @@ const Lantern = () => {
           color='grey'
         />
       </Box>
-      <FireParticles />
+      {intensity ? <FireParticles /> : null}
       <EffectComposer>
         <Bloom luminanceThreshold={0} luminanceSmoothing={0.9} height={300} />
       </EffectComposer>

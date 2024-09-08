@@ -3,7 +3,7 @@ import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { extend } from '@react-three/fiber'
 import { RoundedBoxGeometry } from 'three-stdlib'
-import { RoundedBox } from '@react-three/drei'
+import { Box, RoundedBox } from '@react-three/drei'
 
 extend({ RoundedBoxGeometry })
 
@@ -32,6 +32,21 @@ const WindowFrame = () => {
         map={woodTexture}
         roughnessMap={woodTextureRoughness}
       />
+      <group name='hinges'>
+        <Box args={[0.03, 0.5, 0.2]} position={[-3.9, 7.4, -3]}>
+          <meshStandardMaterial color='#453a3c' />
+        </Box>
+        <Box args={[0.03, 0.5, 0.2]} position={[-3.9, 1.4, -3]}>
+          <meshStandardMaterial color='#453a3c' />
+        </Box>
+
+        <Box args={[0.03, 0.5, 0.2]} position={[3.9, 7.4, -3]}>
+          <meshStandardMaterial color='#453a3c' />
+        </Box>
+        <Box args={[0.03, 0.5, 0.2]} position={[3.9, 1.4, -3]}>
+          <meshStandardMaterial color='#453a3c' />
+        </Box>
+      </group>
       <RoundedBox
         rotation={[0, Math.PI / 2, 0]}
         position={[0, 0.5, -3]}

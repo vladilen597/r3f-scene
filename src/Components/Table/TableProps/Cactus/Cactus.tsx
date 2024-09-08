@@ -5,8 +5,6 @@ import { useGLTF } from '@react-three/drei'
 const Cactus = () => {
   const { nodes: cactus } = useGLTF('/tableProps/cactus.gltf')
 
-  console.log(cactus)
-
   return (
     <group
       scale={[0.3, 0.3, 0.3]}

@@ -1,6 +1,6 @@
 import { Addition, Base, Geometry, Subtraction } from '@react-three/csg'
 import { RoundedBoxGeometry } from 'three-stdlib'
-import { RoundedBox } from '@react-three/drei'
+import { Box, RoundedBox } from '@react-three/drei'
 import { extend, useLoader } from '@react-three/fiber'
 import GlassNoTexture from '../Shared/GlassNoTexture/GlassNoTexture'
 import * as THREE from 'three'
@@ -25,8 +25,6 @@ const Window = ({ position, rotation, animationEnd }: IWindowProps) => {
     '/wood/Wood092_2K-JPG_Roughness.jpg'
   )
   const groupRef = useRef<THREE.Group>(null)
-
-  console.log(animationEnd)
 
   const { rotation: springRotation } = useSpring({
     from: { rotation: [0, rotation[1], 0] },

@@ -173,12 +173,8 @@ const Rope = () => {
     pivotB: [0, 2.5, 0],
   })
 
-  const applyImpulse = () => {
-    tireApi.applyImpulse([10, 0, 0], [0, 0, 0])
-  }
-
   useEffect(() => {
-    tireApi.applyImpulse([50, 0, 0], [0, 0, 0])
+    tireApi.applyImpulse([70, 0, 0], [0, 0, 0])
   }, [])
 
   return (
@@ -222,7 +218,7 @@ const Rope = () => {
       <Cylinder ref={box12ref} args={[0.1, 0.1, 1]} position={[0, 0, 0]}>
         <meshStandardMaterial color='#3d281d' />
       </Cylinder>
-      <mesh ref={tireRef} onClick={applyImpulse}>
+      <mesh ref={tireRef}>
         <Geometry>
           <Base position={[0, -2.5, 0]} rotation={[Math.PI / 2, 0, 0]}>
             <cylinderGeometry args={[5, 5, 2, 32]} />

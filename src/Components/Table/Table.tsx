@@ -24,7 +24,6 @@ const Table = () => {
         <meshStandardMaterial
           map={tableTexture}
           roughnessMap={tableTextureRoughness}
-          isMeshStandardMaterial
           color='#ffc18c'
         />
       </Box>

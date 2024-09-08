@@ -3,8 +3,9 @@ import { useGLTF } from '@react-three/drei'
 import Cactus from './Cactus/Cactus'
 
 const TableProps = () => {
-  const { nodes } = useGLTF('/tableProps/cc0_-_pencil_1k.glb')
+  const { nodes } = useGLTF('/tableProps/pencil.glb')
   const { nodes: book } = useGLTF('/tableProps/book.glb')
+  console.log(nodes)
 
   return (
     <group>
@@ -67,15 +68,99 @@ const TableProps = () => {
           />
         </group>
       </group>
-      <mesh
-        scale={[0.18, 0.1, 0.18]}
+
+      <group
         position={[2, -0.53, -1.5]}
         rotation={[Math.PI / 2, 0, -Math.PI / 8]}
-        castShadow
-        receiveShadow
-        geometry={nodes.Pencil_Pencil_0.geometry}
-        material={nodes.Pencil_Pencil_0.material}
-      />
+        scale={[0.4, 0.4, 0.4]}
+      >
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part.geometry}
+          material={nodes.Pen_Part.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part001.geometry}
+          material={nodes.Pen_Part001.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part002.geometry}
+          material={nodes.Pen_Part002.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part003.geometry}
+          material={nodes.Pen_Part003.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part004.geometry}
+          material={nodes.Pen_Part004.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          rotation={[0, 0, -Math.PI / 9]}
+          position={[0.3, 0.5, 0]}
+          geometry={nodes.Pen_Part005.geometry}
+          material={nodes.Pen_Part005.material}
+          castShadow
+          receiveShadow
+        />
+      </group>
+
+      <group
+        position={[1.7, -0.53, -1.2]}
+        rotation={[Math.PI / 2, 0, Math.PI / 1.1]}
+        scale={[0.4, 0.4, 0.4]}
+      >
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part.geometry}
+          material={nodes.Pen_Part.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part001.geometry}
+          material={nodes.Pen_Part001.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part002.geometry}
+          material={nodes.Pen_Part002.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part003.geometry}
+          material={nodes.Pen_Part003.material}
+          castShadow
+          receiveShadow
+        />
+        <mesh
+          // scale={[0.18, 0.1, 0.18]}
+          geometry={nodes.Pen_Part004.geometry}
+          material={nodes.Pen_Part004.material}
+          castShadow
+          receiveShadow
+        />
+      </group>
     </group>
   )
 }
