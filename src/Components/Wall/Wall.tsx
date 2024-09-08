@@ -8,6 +8,7 @@ const Wall = () => {
   wallTexture.repeat.set(2, 1.5)
   wallTexture.wrapS = THREE.RepeatWrapping
   wallTexture.wrapT = THREE.RepeatWrapping
+
   return (
     <mesh receiveShadow castShadow>
       <Geometry>

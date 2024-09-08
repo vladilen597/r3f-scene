@@ -5,7 +5,6 @@ import Cactus from './Cactus/Cactus'
 const TableProps = () => {
   const { nodes } = useGLTF('/tableProps/pencil.glb')
   const { nodes: book } = useGLTF('/tableProps/book.glb')
-  console.log(nodes)
 
   return (
     <group>
