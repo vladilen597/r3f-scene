@@ -34,7 +34,7 @@ function App() {
       >
         <OrbitControls panSpeed={0.5} />
         {/* switch to 0.1 #040409 later */}
-        <ambientLight intensity={1} color='#fff' />
+        {/* <ambientLight intensity={1} color='#fff' /> */}
         <ambientLight intensity={0.1} color='#040409' />
 
         <group position={[3, 0, -1.5]} rotation={[0, Math.PI / 4, 0]}>
