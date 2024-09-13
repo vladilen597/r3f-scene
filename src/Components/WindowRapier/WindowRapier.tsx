@@ -74,6 +74,7 @@ const WindowRapier = ({ position, rotation, limits, isLeft }: IWindowProps) => {
         rotation={rotation}
         ref={windowRef}
         onSleep={applyImpulse}
+        colliders='cuboid'
       >
         <mesh
           onClick={applyImpulse}

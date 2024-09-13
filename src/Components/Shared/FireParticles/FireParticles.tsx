@@ -20,7 +20,7 @@ class Particle {
       (Math.random() - 0.5) * 0.0005 // Reduced velocity
     )
     this.size = Math.random() * 0.01
-    this.color = new THREE.Color(`#eabc3a`)
+    this.color = new THREE.Color(`#ff8d00`)
   }
 
   update() {

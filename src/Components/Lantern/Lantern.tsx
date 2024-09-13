@@ -8,7 +8,7 @@ import { Subtraction, Base, Geometry } from '@react-three/csg'
 import { useEffect, useState } from 'react'
 
 const Lantern = () => {
-  const [intensity, setIntensity] = useState(10)
+  const [intensity, setIntensity] = useState(15)
   const [hovered, setHovered] = useState(false)
 
   const metalTexture = useLoader(
@@ -170,16 +170,16 @@ const Lantern = () => {
       </group>
       <pointLight
         position={[0.37, 0, 0.37]}
-        color='#eabc3a'
+        color='#ff8d00'
         distance={10}
         castShadow
         intensity={intensity}
-        // shadow-mapSize-width={2048}
-        // shadow-mapSize-height={2048}
-        // shadow-camera-near={0.1}
-        // shadow-camera-far={20}
-        // shadow-bias={-0.005}
-        // shadow-radius={10}
+        shadow-mapSize-width={2048}
+        shadow-mapSize-height={2048}
+        shadow-camera-near={0.1}
+        shadow-camera-far={20}
+        shadow-bias={-0.005}
+        shadow-radius={10}
       />
       <GlassMaterial position={[0.37, 0, 0.37]} />
       <Box

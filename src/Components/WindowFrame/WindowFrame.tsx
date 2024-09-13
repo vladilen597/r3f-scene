@@ -1,10 +1,9 @@
 import { Base, Geometry, Subtraction } from '@react-three/csg'
-import { useLoader, useThree } from '@react-three/fiber'
+import { useLoader } from '@react-three/fiber'
 import * as THREE from 'three'
 import { extend } from '@react-three/fiber'
 import { RoundedBoxGeometry } from 'three-stdlib'
 import { Box, RoundedBox } from '@react-three/drei'
-import { useEffect, useRef } from 'react'
 
 extend({ RoundedBoxGeometry })
 
@@ -17,27 +16,6 @@ const WindowFrame = () => {
     THREE.TextureLoader,
     '/wood/Wood092_2K-JPG_Roughness.jpg'
   )
-
-  const { camera } = useThree()
-
-  useEffect(() => {
-    const listener = new THREE.AudioListener()
-    camera.add(listener)
-
-    const sound = new THREE.Audio(listener)
-
-    const audioLoader = new THREE.AudioLoader()
-    audioLoader.load('/wind.mp3', (buffer) => {
-      sound.setBuffer(buffer)
-      sound.setLoop(true)
-      sound.setVolume(0.5)
-      sound.play()
-    })
-
-    return () => {
-      camera.remove(listener)
-    }
-  }, [camera])
 
   return (
     <mesh receiveShadow castShadow>
