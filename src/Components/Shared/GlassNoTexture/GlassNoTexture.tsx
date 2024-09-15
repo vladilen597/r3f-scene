@@ -10,7 +10,7 @@ const GlassNoTexture = ({
   position = [0, 0, 0],
   args = [1, 1, 1],
 }: GlassNoTextureProps) => {
-  const glassMap = useLoader(THREE.TextureLoader, '/glass/glass-scratch.jpg')
+  const glassMap = useLoader(THREE.TextureLoader, './glass/glass-scratch.jpg')
 
   return (
     <mesh position={position}>

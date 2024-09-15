@@ -5,11 +5,11 @@ import * as THREE from 'three'
 const Floor = () => {
   const floorTexture = useLoader(
     THREE.TextureLoader,
-    '/floor/WoodFloor054_1K-PNG_Color.png'
+    './floor/WoodFloor054_1K-PNG_Color.png'
   )
   const floorTextureRoughness = useLoader(
     THREE.TextureLoader,
-    '/floor/WoodFloor054_1K-PNG_Roughness.png'
+    './floor/WoodFloor054_1K-PNG_Roughness.png'
   )
 
   floorTexture.repeat.set(4, 1)

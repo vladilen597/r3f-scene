@@ -3,8 +3,8 @@ import { useGLTF } from '@react-three/drei'
 import Cactus from './Cactus/Cactus'
 
 const TableProps = () => {
-  const { nodes } = useGLTF('/tableProps/pencil.glb')
-  const { nodes: book } = useGLTF('/tableProps/book.glb')
+  const { nodes } = useGLTF('./tableProps/pencil.glb')
+  const { nodes: book } = useGLTF('./tableProps/book.glb')
 
   return (
     <group>
