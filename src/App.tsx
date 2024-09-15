@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import { Suspense, useRef, useState } from 'react'
-import { Box, OrbitControls, Stats } from '@react-three/drei'
+import { Box, OrbitControls } from '@react-three/drei'
 import Lantern from './Components/Lantern/Lantern'
 import Table from './Components/Table/Table'
 import Floor from './Components/Floor/Floor'
@@ -90,7 +90,6 @@ function App() {
               <Tree />
             </group>
           </Physics>
-          <Stats />
         </Canvas>
       </Suspense>
     </div>
