@@ -1,6 +1,6 @@
-import { Canvas, useThree } from '@react-three/fiber'
-import { Suspense, useState } from 'react'
-import { OrbitControls, Stats } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import { Suspense, useRef, useState } from 'react'
+import { Box, OrbitControls, Stats } from '@react-three/drei'
 import Lantern from './Components/Lantern/Lantern'
 import Table from './Components/Table/Table'
 import Floor from './Components/Floor/Floor'
@@ -19,6 +19,7 @@ import './App.scss'
 
 function App() {
   const [isOpened, setIsOpened] = useState(false)
+  const cameraPoint = useRef(null)
 
   const style = useSpring({
     top: isOpened ? '-100vh' : '0',
@@ -42,12 +43,12 @@ function App() {
           shadows
           camera={{
             far: 3000,
-            position: [0, 0, -5],
+            fov: 60,
+            position: [-0.5, 1.5, 6],
           }}
         >
+          <OrbitControls target={[-0.5, 1.5, 5]} />
           {isOpened ? <WindAudio /> : null}
-          {/* switch to 0.1 #040409 later */}
-          {/* <ambientLight intensity={1} color='#fff' /> */}
           <ambientLight intensity={0.1} color='#040409' />
 
           <group position={[3, 0, -1.5]} rotation={[0, Math.PI / 4, 0]}>
@@ -57,6 +58,11 @@ function App() {
           <Floor />
           <Wall />
           <Sky />
+          <Box
+            ref={cameraPoint}
+            args={[1, 1, 1]}
+            position={[20, 50, -230]}
+          ></Box>
           <PhysicsRapier>
             <WindowRapier
               position={[3.75, 4.4, -2.8]}
