@@ -18,11 +18,11 @@ interface IWindowProps {
 const Window = ({ position, rotation, animationEnd }: IWindowProps) => {
   const woodTexture = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Color.jpg'
+    './wood/Wood092_2K-JPG_Color.jpg'
   )
   const woodTextureRoughness = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Roughness.jpg'
+    './wood/Wood092_2K-JPG_Roughness.jpg'
   )
   const groupRef = useRef<THREE.Group>(null)
 

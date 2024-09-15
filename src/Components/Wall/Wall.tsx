@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import WindowFrame from '../WindowFrame/WindowFrame'
 
 const Wall = () => {
-  const wallTexture = useLoader(THREE.TextureLoader, '/wall/wallpaper.jpg')
+  const wallTexture = useLoader(THREE.TextureLoader, './wall/wallpaper.jpg')
   wallTexture.repeat.set(2, 1.5)
   wallTexture.wrapS = THREE.RepeatWrapping
   wallTexture.wrapT = THREE.RepeatWrapping

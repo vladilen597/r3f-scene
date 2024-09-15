@@ -6,11 +6,11 @@ import TableProps from './TableProps/TableProps'
 const Table = () => {
   const tableTexture = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Color.jpg'
+    './wood/Wood092_2K-JPG_Color.jpg'
   )
   const tableTextureRoughness = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Roughness.jpg'
+    './wood/Wood092_2K-JPG_Roughness.jpg'
   )
 
   return (

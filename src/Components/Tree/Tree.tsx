@@ -2,7 +2,7 @@ import { useGLTF } from '@react-three/drei'
 import Rope from './Rope/Rope'
 
 const Tree = () => {
-  const { nodes } = useGLTF('/tree/tree.gltf')
+  const { nodes } = useGLTF('./tree/tree.gltf')
 
   return (
     // @ts-ignore

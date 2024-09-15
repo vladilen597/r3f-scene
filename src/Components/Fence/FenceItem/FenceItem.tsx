@@ -11,7 +11,7 @@ const FenceItem = ({
   position = [0, 0, 0],
   rotation = [Math.PI / 2, 0, Math.PI / 3],
 }: IFenceItemProps) => {
-  const { nodes: fence } = useGLTF('/fence/fence.glb')
+  const { nodes: fence } = useGLTF('./fence/fence.glb')
 
   return (
     <group position={position}>

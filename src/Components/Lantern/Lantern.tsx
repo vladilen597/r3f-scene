@@ -13,15 +13,15 @@ const Lantern = () => {
 
   const metalTexture = useLoader(
     THREE.TextureLoader,
-    '/metal/Metal053A_1K-PNG_Color.png'
+    './metal/Metal053A_1K-PNG_Color.png'
   )
   const metalMetalness = useLoader(
     THREE.TextureLoader,
-    '/metal/Metal053A_1K-PNG_Metalness.png'
+    './metal/Metal053A_1K-PNG_Metalness.png'
   )
   const metalRoughness = useLoader(
     THREE.TextureLoader,
-    '/metal/Metal053A_1K-PNG_Roughness.png'
+    './metal/Metal053A_1K-PNG_Roughness.png'
   )
 
   const higherIntensity = () => {
