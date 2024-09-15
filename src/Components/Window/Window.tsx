@@ -1,6 +1,6 @@
 import { Addition, Base, Geometry, Subtraction } from '@react-three/csg'
 import { RoundedBoxGeometry } from 'three-stdlib'
-import { Box, RoundedBox } from '@react-three/drei'
+import { RoundedBox } from '@react-three/drei'
 import { extend, useLoader } from '@react-three/fiber'
 import GlassNoTexture from '../Shared/GlassNoTexture/GlassNoTexture'
 import * as THREE from 'three'
