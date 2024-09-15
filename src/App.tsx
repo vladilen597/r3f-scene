@@ -1,6 +1,5 @@
 import { Canvas } from '@react-three/fiber'
-import { Suspense, useRef, useState } from 'react'
-import { Box, OrbitControls } from '@react-three/drei'
+import { Suspense, useState } from 'react'
 import Lantern from './Components/Lantern/Lantern'
 import Table from './Components/Table/Table'
 import Floor from './Components/Floor/Floor'
@@ -16,10 +15,10 @@ import WindAudio from './Components/WindAudio/WindAudio'
 import { animated, useSpring } from '@react-spring/web'
 
 import './App.scss'
+import Camera from './Components/Camera/Camera'
 
 function App() {
   const [isOpened, setIsOpened] = useState(false)
-  const cameraPoint = useRef(null)
 
   const style = useSpring({
     top: isOpened ? '-100vh' : '0',
@@ -47,7 +46,6 @@ function App() {
             position: [-0.5, 1.5, 6],
           }}
         >
-          <OrbitControls target={[-0.5, 1.5, 5]} />
           {isOpened ? <WindAudio /> : null}
           <ambientLight intensity={0.1} color='#040409' />
 
@@ -58,11 +56,6 @@ function App() {
           <Floor />
           <Wall />
           <Sky />
-          <Box
-            ref={cameraPoint}
-            args={[1, 1, 1]}
-            position={[20, 50, -230]}
-          ></Box>
           <PhysicsRapier>
             <WindowRapier
               position={[3.75, 4.4, -2.8]}
@@ -84,6 +77,7 @@ function App() {
           </PhysicsRapier>
           <Terrain />
           <Fence />
+          <Camera />
 
           <Physics>
             <group position={[80, 19, -290]}>

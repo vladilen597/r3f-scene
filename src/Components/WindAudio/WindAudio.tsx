@@ -10,7 +10,7 @@ const WindAudio = () => {
     camera.add(listener)
     const sound = new THREE.Audio(listener)
     const audioLoader = new THREE.AudioLoader()
-    audioLoader.load('/wind.mp3', (buffer) => {
+    audioLoader.load('./wind.mp3', (buffer) => {
       sound.setBuffer(buffer)
       sound.setLoop(true)
       sound.setVolume(1)
