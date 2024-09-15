@@ -7,8 +7,8 @@ const Camera = () => {
       target={[-0.5, 1.5, 5]}
       enablePan={false}
       rotateSpeed={0.05}
-      maxAzimuthAngle={0.5}
-      minAzimuthAngle={-0.5}
+      maxAzimuthAngle={0.2}
+      minAzimuthAngle={-0.2}
       maxPolarAngle={1.8}
       minPolarAngle={1.4}
     />
