@@ -24,11 +24,11 @@ const WindowRapier = ({ position, rotation, limits, isLeft }: IWindowProps) => {
   const [limit1, limit2] = limits
   const woodTexture = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Color.jpg'
+    './wood/Wood092_2K-JPG_Color.jpg'
   )
   const woodTextureRoughness = useLoader(
     THREE.TextureLoader,
-    '/wood/Wood092_2K-JPG_Roughness.jpg'
+    './wood/Wood092_2K-JPG_Roughness.jpg'
   )
   const hingeRef = useRef<RapierRigidBody>(null)
   const windowRef = useRef<RapierRigidBody>(null)

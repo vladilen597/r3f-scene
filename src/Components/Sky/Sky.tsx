@@ -3,7 +3,7 @@ import { TextureLoader } from 'three'
 import { useLoader } from '@react-three/fiber'
 
 const Sky = () => {
-  const moonTexture = useLoader(TextureLoader, '/moon/moon.jpg')
+  const moonTexture = useLoader(TextureLoader, './moon/moon.jpg')
 
   return (
     <>
